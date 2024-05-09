@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: 09-05-create-book-table
+      author: Powergleb
+      changes:
+        - createTable:
+            tableName: books
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: book_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: isbn
+                  type: varchar(40)
+                  constraints:
+                    nullable: false
+        - addAutoIncrement:
+            tableName: books
+            columnName: id

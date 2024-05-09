@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 001-create-client-table
+      id: 09-05-create-client-table
       author: Powergleb
       changes:
         - createTable:
