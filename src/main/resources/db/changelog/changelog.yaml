@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-client-table
+      author: Powergleb
+      changes:
+        - createTable:
+            tableName: clients
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(255)
+              - column:
+                  name: patronymic
+                  type: varchar(255)
+              - column:
+                  name: birth_date
+                  type: date
+        - addAutoIncrement:
+            tableName: clients
+            columnName: id
