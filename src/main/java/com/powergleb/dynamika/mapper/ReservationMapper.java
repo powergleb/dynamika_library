@@ -1,6 +1,6 @@
 package com.powergleb.dynamika.mapper;
 
-import com.powergleb.dynamika.dto.CreateReservationDto;
+import com.powergleb.dynamika.dto.ReservationCreateDto;
 import com.powergleb.dynamika.dto.ReservationDto;
 import com.powergleb.dynamika.entity.Reservation;
 
@@ -19,10 +19,10 @@ public class ReservationMapper {
         return dtos;
     }
 
-    public static Reservation toEntity(CreateReservationDto createReservationDto) {
+    public static Reservation toEntity(ReservationCreateDto reservationCreateDto) {
         Reservation reservation = new Reservation();
-        reservation.setBookId(createReservationDto.getBookId());
-        reservation.setClientId(createReservationDto.getClientId());
+        reservation.setBookId(reservationCreateDto.getBookId());
+        reservation.setClientId(reservationCreateDto.getClientId());
         reservation.setStartTime(LocalDateTime.now()); // Assuming you set start time at creation
         return reservation;
     }

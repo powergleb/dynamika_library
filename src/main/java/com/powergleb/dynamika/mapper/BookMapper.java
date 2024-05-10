@@ -1,7 +1,7 @@
 package com.powergleb.dynamika.mapper;
 
 import com.powergleb.dynamika.dto.BookDto;
-import com.powergleb.dynamika.dto.CreateBookDto;
+import com.powergleb.dynamika.dto.BookCreateDto;
 import com.powergleb.dynamika.entity.Book;
 
 
@@ -18,7 +18,7 @@ public class BookMapper {
         return dtos;
     }
 
-    public static Book toEntity(CreateBookDto dto) {
+    public static Book toEntity(BookCreateDto dto) {
         Book book = new Book();
         book.setName(dto.getName());
         book.setAuthor(dto.getAuthor());

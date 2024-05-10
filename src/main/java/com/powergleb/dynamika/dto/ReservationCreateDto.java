@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateReservationDto {
+public class ReservationCreateDto {
 
     @NotNull(message = "Введите id книги, которую хотите взять")
     @NotBlank(message = "Введите id книги, которую хотите взять")

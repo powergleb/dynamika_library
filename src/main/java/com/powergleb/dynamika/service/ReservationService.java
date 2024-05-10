@@ -1,6 +1,6 @@
 package com.powergleb.dynamika.service;
 
-import com.powergleb.dynamika.dto.CreateReservationDto;
+import com.powergleb.dynamika.dto.ReservationCreateDto;
 import com.powergleb.dynamika.dto.ReservationInfoDto;
 import com.powergleb.dynamika.entity.Reservation;
 import com.powergleb.dynamika.exception.BookAlreadyReservedException;
@@ -19,27 +19,27 @@ import java.util.List;
 public class ReservationService {
 
     private final ReservationRepo reservationRepo;
-    private final ReservationMapper reservationMapper;
+    private ReservationMapper reservationMapper;
 
     public List<Reservation> getAllBorrows() {
         return reservationRepo.findAll();
     }
 
-    public Reservation startReservation(CreateReservationDto createReservationDto) {
-        if (reservationRepo.existsByBookIdAndClientId(createReservationDto.getBookId(), createReservationDto.getClientId())) {
+    public Reservation startReservation(ReservationCreateDto reservationCreateDto) {
+        if (reservationRepo.existsByBookIdAndClientId(reservationCreateDto.getBookId(), reservationCreateDto.getClientId())) {
             throw new BookAlreadyReservedException();
         }
-        Reservation reservation = reservationMapper.toEntity(createReservationDto);
+        Reservation reservation = reservationMapper.toEntity(reservationCreateDto);
         reservation.setStartTime(LocalDateTime.now());
         return reservationRepo.saveAndFlush(reservation);
     }
 
     @Transactional
-    public void endReservation(CreateReservationDto createReservationDto) {
-        if (!reservationRepo.existsByBookIdAndClientId(createReservationDto.getBookId(), createReservationDto.getClientId())) {
+    public void endReservation(ReservationCreateDto reservationCreateDto) {
+        if (!reservationRepo.existsByBookIdAndClientId(reservationCreateDto.getBookId(), reservationCreateDto.getClientId())) {
             throw new BookWasntReservedException();
         }
-        reservationRepo.deleteByBookIdAndClientId(createReservationDto.getBookId(), createReservationDto.getClientId());
+        reservationRepo.deleteByBookIdAndClientId(reservationCreateDto.getBookId(), reservationCreateDto.getClientId());
     }
 
     public List<ReservationInfoDto> getAllReservationsInfo() {
