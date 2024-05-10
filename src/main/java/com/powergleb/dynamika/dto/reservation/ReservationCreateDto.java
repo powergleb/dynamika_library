@@ -1,4 +1,4 @@
-package com.powergleb.dynamika.dto;
+package com.powergleb.dynamika.dto.reservation;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,10 +13,8 @@ import javax.validation.constraints.NotNull;
 public class ReservationCreateDto {
 
     @NotNull(message = "Введите id книги, которую хотите взять")
-    @NotBlank(message = "Введите id книги, которую хотите взять")
     public long bookId;
     @NotNull(message = "Введите ваш id")
-    @NotBlank(message = "Введите ваш id")
     public long clientId;
 
 }

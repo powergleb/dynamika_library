@@ -1,7 +1,7 @@
 package com.powergleb.dynamika.api;
 
-import com.powergleb.dynamika.dto.ClientDto;
-import com.powergleb.dynamika.dto.ClientCreateDto;
+import com.powergleb.dynamika.dto.client.ClientDto;
+import com.powergleb.dynamika.dto.client.ClientCreateDto;
 import com.powergleb.dynamika.entity.Client;
 import com.powergleb.dynamika.mapper.ClientMapper;
 import com.powergleb.dynamika.service.ClientService;
@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/rest-api-clients")
 @RequiredArgsConstructor
 public class ClientRestApi {
 
@@ -32,15 +32,13 @@ public class ClientRestApi {
     @PostMapping("/addClient")
     public ResponseEntity<ClientDto> addClient(@Valid @RequestBody ClientCreateDto clientDto) {
         Client addedClient = clientService.addClient(clientMapper.toEntity(clientDto));
-
         return ResponseEntity.status(HttpStatus.CREATED).body(clientMapper.toDto(addedClient));
     }
 
 
-    @PutMapping(path = "/{id}")
-    public ResponseEntity<ClientDto> updateClient(@Valid @RequestBody ClientCreateDto clientDto, @PathVariable long id) {
+    @PutMapping("/updateClient")
+    public ResponseEntity<ClientDto> updateClient(@Valid @RequestBody ClientCreateDto clientDto, @RequestParam("id") long id) {
         Client updatedClient = clientService.updateClient(clientMapper.toEntity(clientDto), id);
-
         return ResponseEntity.ok(clientMapper.toDto(updatedClient));
     }
 

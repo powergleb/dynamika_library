@@ -1,4 +1,4 @@
-package com.powergleb.dynamika.dto;
+package com.powergleb.dynamika.dto.client;
 
 
 import lombok.Data;

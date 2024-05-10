@@ -1,4 +1,4 @@
-package com.powergleb.dynamika.dto;
+package com.powergleb.dynamika.dto.reservation;
 
 
 import lombok.AllArgsConstructor;

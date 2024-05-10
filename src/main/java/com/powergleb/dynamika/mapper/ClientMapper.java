@@ -1,8 +1,8 @@
 package com.powergleb.dynamika.mapper;
 
 
-import com.powergleb.dynamika.dto.ClientDto;
-import com.powergleb.dynamika.dto.ClientCreateDto;
+import com.powergleb.dynamika.dto.client.ClientDto;
+import com.powergleb.dynamika.dto.client.ClientCreateDto;
 import com.powergleb.dynamika.entity.Client;
 
 

@@ -1,8 +1,8 @@
 package com.powergleb.dynamika.api;
 
 
-import com.powergleb.dynamika.dto.BookCreateDto;
-import com.powergleb.dynamika.dto.BookDto;
+import com.powergleb.dynamika.dto.book.BookCreateDto;
+import com.powergleb.dynamika.dto.book.BookDto;
 import com.powergleb.dynamika.entity.Book;
 import com.powergleb.dynamika.mapper.BookMapper;
 import com.powergleb.dynamika.service.BookService;
@@ -16,26 +16,26 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/rest-books")
+@RequestMapping("/rest-api-books")
 @RequiredArgsConstructor
 public class BookRestApi {
 
     private final BookService bookService;
-    private BookMapper bookMapper;
+    private BookMapper bookMapper = new BookMapper();
 
-    @GetMapping
+    @GetMapping("/getAllBooks")
     public ResponseEntity<List<BookDto>> getAllBooks() {
         return ResponseEntity.ok(bookMapper.toDtoList(bookService.getAllBooks()));
     }
 
-    @PostMapping
+    @PostMapping("/addBook")
     public ResponseEntity<BookDto> addBook(@Valid @RequestBody BookCreateDto bookDto) {
         Book addedBook = bookService.addBook(bookMapper.toEntity(bookDto));
         return ResponseEntity.status(HttpStatus.CREATED).body(bookMapper.toDto(addedBook));
     }
 
-    @PutMapping(path = "/{id}")
-    public ResponseEntity<BookDto> updateBook(@Valid @RequestBody BookCreateDto bookDto, @PathVariable long id) {
+    @PutMapping("/updateBook")
+    public ResponseEntity<BookDto> updateBook(@Valid @RequestBody BookCreateDto bookDto, @RequestParam("id") long id) {
         Book updatedBook = bookService.updateBook(bookMapper.toEntity(bookDto), id);
         return ResponseEntity.ok(bookMapper.toDto(updatedBook));
     }

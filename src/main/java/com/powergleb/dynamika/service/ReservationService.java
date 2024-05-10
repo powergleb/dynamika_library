@@ -1,7 +1,7 @@
 package com.powergleb.dynamika.service;
 
-import com.powergleb.dynamika.dto.ReservationCreateDto;
-import com.powergleb.dynamika.dto.ReservationInfoDto;
+import com.powergleb.dynamika.dto.reservation.ReservationCreateDto;
+import com.powergleb.dynamika.dto.reservation.ReservationInfoDto;
 import com.powergleb.dynamika.entity.Reservation;
 import com.powergleb.dynamika.exception.BookAlreadyReservedException;
 import com.powergleb.dynamika.exception.BookWasntReservedException;
@@ -21,7 +21,7 @@ public class ReservationService {
     private final ReservationRepo reservationRepo;
     private ReservationMapper reservationMapper;
 
-    public List<Reservation> getAllBorrows() {
+    public List<Reservation> getAllReservations() {
         return reservationRepo.findAll();
     }
 
@@ -43,6 +43,6 @@ public class ReservationService {
     }
 
     public List<ReservationInfoDto> getAllReservationsInfo() {
-        return reservationRepo.getAllBorrowsInfo();
+        return reservationRepo.getAllReservationsInfo();
     }
 }

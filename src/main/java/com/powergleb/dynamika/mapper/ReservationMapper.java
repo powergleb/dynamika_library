@@ -1,7 +1,7 @@
 package com.powergleb.dynamika.mapper;
 
-import com.powergleb.dynamika.dto.ReservationCreateDto;
-import com.powergleb.dynamika.dto.ReservationDto;
+import com.powergleb.dynamika.dto.reservation.ReservationCreateDto;
+import com.powergleb.dynamika.dto.reservation.ReservationDto;
 import com.powergleb.dynamika.entity.Reservation;
 
 

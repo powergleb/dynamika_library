@@ -1,7 +1,7 @@
 package com.powergleb.dynamika.mapper;
 
-import com.powergleb.dynamika.dto.BookDto;
-import com.powergleb.dynamika.dto.BookCreateDto;
+import com.powergleb.dynamika.dto.book.BookDto;
+import com.powergleb.dynamika.dto.book.BookCreateDto;
 import com.powergleb.dynamika.entity.Book;
 
 

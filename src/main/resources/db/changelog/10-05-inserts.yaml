@@ -1,0 +1,590 @@
+databaseChangeLog:
+- changeSet:
+    id: 10-05-inserts
+    author: Powergleb
+    changes:
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Crime and Punishment
+            - column:
+                name: author
+                value: Fyodor Dostoevsky
+            - column:
+                name: isbn
+                value: 888888888888
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: 1984
+            - column:
+                name: author
+                value: George Orwell
+            - column:
+                name: isbn
+                value: 999999999999
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: To Kill a Mockingbird
+            - column:
+                name: author
+                value: Harper Lee
+            - column:
+                name: isbn
+                value: 101010101010
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Great Gatsby
+            - column:
+                name: author
+                value: F. Scott Fitzgerald
+            - column:
+                name: isbn
+                value: 121212121212
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Pride and Prejudice
+            - column:
+                name: author
+                value: Jane Austen
+            - column:
+                name: isbn
+                value: 131313131313
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Catcher in the Rye
+            - column:
+                name: author
+                value: J.D. Salinger
+            - column:
+                name: isbn
+                value: 141414141414
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Lord of the Rings
+            - column:
+                name: author
+                value: J.R.R. Tolkien
+            - column:
+                name: isbn
+                value: 151515151515
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Hobbit
+            - column:
+                name: author
+                value: J.R.R. Tolkien
+            - column:
+                name: isbn
+                value: 161616161616
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Chronicles of Narnia
+            - column:
+                name: author
+                value: C.S. Lewis
+            - column:
+                name: isbn
+                value: 171717171717
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Moby-Dick
+            - column:
+                name: author
+                value: Herman Melville
+            - column:
+                name: isbn
+                value: 181818181818
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Frankenstein
+            - column:
+                name: author
+                value: Mary Shelley
+            - column:
+                name: isbn
+                value: 191919191919
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Picture of Dorian Gray
+            - column:
+                name: author
+                value: Oscar Wilde
+            - column:
+                name: isbn
+                value: 202020202020
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Don Quixote
+            - column:
+                name: author
+                value: Miguel de Cervantes
+            - column:
+                name: isbn
+                value: 212121212121
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: The Odyssey
+            - column:
+                name: author
+                value: Homer
+            - column:
+                name: isbn
+                value: 222222222222
+      - insert:
+          tableName: books
+          columns:
+            - column:
+                name: book_name
+                value: Hamlet
+            - column:
+                name: author
+                value: William Shakespeare
+            - column:
+                name: isbn
+                value: 232323232323
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Maria
+            - column:
+                name: last_name
+                value: Petrova
+            - column:
+                name: patronymic
+                value: Alexandrovna
+            - column:
+                name: birthday
+                value: 1995-07-12
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Alexey
+            - column:
+                name: last_name
+                value: Smirnov
+            - column:
+                name: patronymic
+                value: Andreevich
+            - column:
+                name: birthday
+                value: 1980-03-25
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Ekaterina
+            - column:
+                name: last_name
+                value: Ivanova
+            - column:
+                name: patronymic
+                value: Sergeyevna
+            - column:
+                name: birthday
+                value: 1988-12-04
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Sergey
+            - column:
+                name: last_name
+                value: Volkov
+            - column:
+                name: patronymic
+                value: Dmitrievich
+            - column:
+                name: birthday
+                value: 1976-05-30
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Olga
+            - column:
+                name: last_name
+                value: Popova
+            - column:
+                name: patronymic
+                value: Viktorovna
+            - column:
+                name: birthday
+                value: 1983-08-17
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Mikhail
+            - column:
+                name: last_name
+                value: Sokolov
+            - column:
+                name: patronymic
+                value: Vladimirovich
+            - column:
+                name: birthday
+                value: 1990-02-08
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Anna
+            - column:
+                name: last_name
+                value: Kuznetsova
+            - column:
+                name: patronymic
+                value: Petrovna
+            - column:
+                name: birthday
+                value: 1973-09-21
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Dmitry
+            - column:
+                name: last_name
+                value: Fedorov
+            - column:
+                name: patronymic
+                value: Alexeevich
+            - column:
+                name: birthday
+                value: 1965-11-14
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Elena
+            - column:
+                name: last_name
+                value: Morozova
+            - column:
+                name: patronymic
+                value: Ivanovna
+            - column:
+                name: birthday
+                value: 1986-04-03
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Denis
+            - column:
+                name: last_name
+                value: Smirnov
+            - column:
+                name: patronymic
+                value: Sergeyevich
+            - column:
+                name: birthday
+                value: 1978-06-28
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Natalia
+            - column:
+                name: last_name
+                value: Kuznetsova
+            - column:
+                name: patronymic
+                value: Ivanovna
+            - column:
+                name: birthday
+                value: 1992-01-19
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Vladimir
+            - column:
+                name: last_name
+                value: Petrov
+            - column:
+                name: patronymic
+                value: Vladimirovich
+            - column:
+                name: birthday
+                value: 1970-10-10
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Irina
+            - column:
+                name: last_name
+                value: Ivanova
+            - column:
+                name: patronymic
+                value: Aleksandrovna
+            - column:
+                name: birthday
+                value: 1985-12-07
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Andrey
+            - column:
+                name: last_name
+                value: Smirnov
+            - column:
+                name: patronymic
+                value: Alekseevich
+            - column:
+                name: birthday
+                value: 1977-08-22
+      - insert:
+          tableName: clients
+          columns:
+            - column:
+                name: first_name
+                value: Svetlana
+            - column:
+                name: last_name
+                value: Volkova
+            - column:
+                name: patronymic
+                value: Ivanovna
+            - column:
+                name: birthday
+                value: 1998-03-15
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 3
+            - column:
+                name: client_id
+                value: 3
+            - column:
+                name: start_time
+                value: 2024-02-28
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 4
+            - column:
+                name: client_id
+                value: 4
+            - column:
+                name: start_time
+                value: 2024-03-15
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 5
+            - column:
+                name: client_id
+                value: 5
+            - column:
+                name: start_time
+                value: 2024-04-22
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 6
+            - column:
+                name: client_id
+                value: 6
+            - column:
+                name: start_time
+                value: 2024-05-08
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 7
+            - column:
+                name: client_id
+                value: 7
+            - column:
+                name: start_time
+                value: 2024-06-11
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 8
+            - column:
+                name: client_id
+                value: 8
+            - column:
+                name: start_time
+                value: 2024-07-17
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 9
+            - column:
+                name: client_id
+                value: 9
+            - column:
+                name: start_time
+                value: 2024-08-29
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 10
+            - column:
+                name: client_id
+                value: 10
+            - column:
+                name: start_time
+                value: 2024-09-03
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 11
+            - column:
+                name: client_id
+                value: 11
+            - column:
+                name: start_time
+                value: 2024-10-21
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 12
+            - column:
+                name: client_id
+                value: 12
+            - column:
+                name: start_time
+                value: 2024-11-04
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 13
+            - column:
+                name: client_id
+                value: 13
+            - column:
+                name: start_time
+                value: 2024-12-07
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 14
+            - column:
+                name: client_id
+                value: 14
+            - column:
+                name: start_time
+                value: 2025-01-13
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 15
+            - column:
+                name: client_id
+                value: 15
+            - column:
+                name: start_time
+                value: 2025-02-28
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 11
+            - column:
+                name: client_id
+                value: 13
+            - column:
+                name: start_time
+                value: 2025-03-09
+      - insert:
+          tableName: reservations
+          columns:
+            - column:
+                name: book_id
+                value: 13
+            - column:
+                name: client_id
+                value: 11
+            - column:
+                name: start_time
+                value: 2025-04-25
