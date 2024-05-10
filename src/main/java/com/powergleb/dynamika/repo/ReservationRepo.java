@@ -14,7 +14,7 @@ public interface ReservationRepo extends JpaRepository<Reservation, Long> {
 
     Long deleteByBookIdAndClientId(long bookId, long clientId);
 
-    @Query("select new com.powergleb.dynamika.dto.ReservationInfoDto(c.firstName, c.lastName, c.patronymic, c.birthday, " +
+    @Query("select new com.powergleb.dynamika.dto.reservation.ReservationInfoDto(c.firstName, c.lastName, c.patronymic, c.birthday, " +
             "b.name, b.author, b.isbn, re.startTime) " +
             "from Client as c " +
             "join fetch Reservation as re " +
